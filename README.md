@@ -1,24 +1,27 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column             | Type    | Options     |
+| ------------------ | ------- | ----------- |
+| nickname           | string  | null: false |
+| email              | string  | null: false |
+| encrypted_password | string  | null: false |
 
-Things you may want to cover:
+### 画像はActiveStorageを使用
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :posts
 
-* Configuration
 
-* Database creation
+## posts テーブル
 
-* Database initialization
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| url     | text       | null: false                    |
+| month   | string     | null: false                    |
+| year    | string     | null: false                    |
+| user_id | references | null: false, foreign_key: true |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- belongs_to :user

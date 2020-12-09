@@ -2,4 +2,14 @@
 
 <div class="main-post-container">main-post</div>
 <div class="sub-posts-container">sub-posts</div>
-<div class="mini-posts-container  ">mini-posts</div>
+<div class="mini-posts-container">mini-posts</div>
+
+
+
+<div class="">
+  <% @posts.each do |post| %>
+    <div class="content_post<%= post.id %>">
+      <%= link_to "post#{post.id}", post.url, :target => "_blank" %>
+    </div>
+  <% end %>
+</div>

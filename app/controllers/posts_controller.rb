@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   def index
+    t = Time.new
     @post = Post.new
-    @posts = Post.where(user_id: current_user.id)
-    binding.pry
+    @posts = Post.where(user_id: current_user.id).where(month: t.month).where(year: t.year)
   end
   def create
     @post = Post.new(post_params)

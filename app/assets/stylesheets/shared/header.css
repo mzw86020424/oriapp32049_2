@@ -1,0 +1,127 @@
+/*FontAwesomeを使用しています。*/
+.header {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1024px;
+  height: 60px;
+  padding: 0 0.8em;
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 1.5rem;
+}
+
+#menu3 {
+  display: none;
+}
+
+.menu3 {
+  display: block;
+  width: 20px;
+  font-size: 0;
+}
+
+.menu3-1,
+.menu3-2,
+.menu3-3 {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  margin: 2px 0;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.4s;
+}
+
+#menu3:checked ~ .menu3-1 {
+  transform: translateY(6px) rotate(-45deg);
+}
+
+#menu3:checked ~ .menu3-2 {
+  opacity: 0;
+}
+
+#menu3:checked ~ .menu3-3 {
+  transform: translateY(-6px) rotate(45deg);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-item {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.logo img {
+  width: 70px;
+}
+
+.text9 {
+  font-weight: bold;
+  background: linear-gradient(transparent 75%, yellow 75%);
+}
+
+.header-avatar {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.form {
+  position: relative;
+}
+
+.form-input {
+  box-sizing: border-box;
+  width: 140px;
+  height: 28px;
+  padding: 0 8px 0;
+  margin: 5px 0;
+  font-size: 12px;
+  color: #333;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  outline: 0;
+  transition: 0.3s;
+  -webkit-appearance: none;
+}
+
+.form-input:focus {
+  border: 1px solid #00b5ad;
+}
+
+.button-2 {
+  display: inline-block;
+  padding: 0.4em 2.6em;
+  font-size: 0.3rem;
+  color: #00b5ad;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #00b5ad solid;
+  border-radius: 20px;
+  transition: 0.2s ease;
+}
+
+.button-2:hover {
+  color: #fff;
+  background: #00b5ad;
+}

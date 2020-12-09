@@ -1,12 +1,18 @@
-.main-post {
+.main-post-container {
   width: 100vw;
   background-color: blanchedalmond;
   height: 60vh;
 }
 
-.main-post img {
+.main-post-container img {
   background-color: #ccc;
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.sub-posts-container {
+  width: 100vw;
+  background-color: aliceblue;
+  height: 30vh;
 }

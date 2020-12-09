@@ -1,4 +1,26 @@
-/*FontAwesomeを使用しています。*/
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+header {
+  height: 60px;
+  display: flex;
+  padding: 0 60px;
+}
+li{
+  list-style: none;
+  padding: 20px;
+}
+
 .header {
   box-sizing: border-box;
   width: 100%;
@@ -24,39 +46,36 @@
   margin-left: 1.5rem;
 }
 
-#menu3 {
+.navbar {
+  width: 50%;
+}
+.nav-lists {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.red{
+  background-color: red;
+}
+.show-lists{
+  width: 200px;
+  position: absolute;
+  right: 370px;
+  top: 70px;
+  background-color: #ffffff;
+}
+.background-red{
+  background-color: #FF6666 ;
+  color: white;
+}
+.pull-down-list{
+  padding: 15px 35px 15px 15px;
+  border: 1px solid #eee;
+}
+
+.hidden{
   display: none;
-}
-
-.menu3 {
-  display: block;
-  width: 20px;
-  font-size: 0;
-}
-
-.menu3-1,
-.menu3-2,
-.menu3-3 {
-  box-sizing: border-box;
-  display: inline-block;
-  width: 20px;
-  height: 2px;
-  margin: 2px 0;
-  background-color: #333;
-  border-radius: 2px;
-  transition: all 0.4s;
-}
-
-#menu3:checked ~ .menu3-1 {
-  transform: translateY(6px) rotate(-45deg);
-}
-
-#menu3:checked ~ .menu3-2 {
-  opacity: 0;
-}
-
-#menu3:checked ~ .menu3-3 {
-  transform: translateY(-6px) rotate(45deg);
 }
 
 .header-nav {

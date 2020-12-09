@@ -52,9 +52,9 @@ header {
   border-radius: 50%;
 }
 
-.form {
+/* .form {
   position: relative;
-}
+} */
 
 .form-input {
   box-sizing: border-box;
@@ -70,6 +70,7 @@ header {
   transition: 0.3s;
   -webkit-appearance: none;
 }
+
 
 .form-input:focus {
   border: 1px solid #00b5ad;

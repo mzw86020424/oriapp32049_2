@@ -23,7 +23,9 @@
           <li class="pull-down-list">リスト1</li>
           <li class="pull-down-list">リスト2</li>
           <li class="pull-down-list">リスト3</li>
-          <li class="pull-down-list">リスト4</li>
+          <li class="pull-down-list">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </li>
           </ul>
         </div>
       </div>

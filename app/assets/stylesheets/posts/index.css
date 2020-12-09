@@ -1,25 +1,38 @@
-.main-post-container {
+
+.content_post0 {
   margin-top: 60px;
   width: 100vw;
   background-color: blanchedalmond;
   height: 60vh;
 }
 
-.main-post-container img {
+.content_post img {
   background-color: #ccc;
   object-fit: cover;
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
 
-.sub-posts-container {
-  width: 100vw;
+.content_post1 {
+  width: 50vw;
   background-color: aliceblue;
   height: 30vh;
 }
 
-.mini-posts-container {
-  width: 100vw;
+.content_post2 {
+  width: 50vw;
   background-color: azure;
-  height: 15vh;
+  height: 30vh;
+}
+
+.content_post3 {
+  width: 20vw;
+  background-color: cadetblue;
+  height: 10vh;
+}
+
+.content_post4 {
+  width: 20vw;
+  background-color: cyan;
+  height: 10vh;
 }

@@ -5,6 +5,16 @@
       <%= devise_error_messages! %>
 
       <div class="field">
+        <%= f.label :icon %> 
+        <%= f.file_field :image %>
+      </div>
+
+      <div class="field">
+        <%= f.label :nickname %> 
+        <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
+      </div>
+
+      <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email %>
       </div>

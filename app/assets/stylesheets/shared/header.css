@@ -37,10 +37,6 @@ li{
   font-size: 1.2em;
 }
 
-.header-left {
-  display: flex;
-  align-items: center;
-}
 
 .logo {
   margin-left: 1.5rem;
@@ -65,6 +61,7 @@ li{
   top: 70px;
   background-color: #ffffff;
 }
+
 .background-red{
   background-color: #FF6666 ;
   color: white;

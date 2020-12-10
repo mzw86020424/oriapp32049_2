@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def index
     t = Time.new
     @post = Post.new
-    @posts = Post.where(user_id: current_user.id).where(month: t.month).where(year: t.year)
+    @posts = Post.where(user_id: current_user.id).where(month: t.month).where(year: t.year).order("created_at DESC")
   end
 
   def create

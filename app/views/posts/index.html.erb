@@ -3,8 +3,7 @@
 <div class="content_container">
   <% @posts.each_with_index do |post, i| %>
     <div class="content_post<%= i %>">
-      <%= link_to "post#{post.id}", post.url, :target => "_blank" %>
-      <img src="<%= thumbalizr_url(post.url) %> "> 
+      <%= link_to image_tag(thumbalizr_url(post.url, {:width =>  1080})), post.url, :target => "_blank" %>
     </div>
   <% end %>
 </div>

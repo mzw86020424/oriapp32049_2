@@ -6,16 +6,13 @@
     </div>
     <nav class="header-nav">
       <div class="header-nav-item-input">
-        <%# <form class="form">
-          <input type="search" class="form-input" placeholder="URL" />
-          <a href="#!" class="button-2">SAVE!</a>
-        </form> %>
-        <%= form_with model: @post, class: 'form', local: true do |f| %>
+        <%= form_with url: zine_posts_path(@zine.ids), method: :post, local: true do |f| %>
           <div class="form-input">
             <%= f.text_field :url, class: 'form-input', placeholder: 'url' %>
           </div>
           <%= f.submit 'SAVE!', class: 'button-2' %>
         <% end %>
+      
       </div>
       <div class="header-nav-item">
             <%= image_tag current_user.image, class: 'header-avatar' %>

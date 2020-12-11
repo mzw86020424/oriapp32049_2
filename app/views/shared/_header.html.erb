@@ -6,7 +6,7 @@
     </div>
     <nav class="header-nav">
       <div class="header-nav-item-input">
-        <%= form_with url: zine_posts_path(@zine.ids), method: :post, local: true do |f| %>
+        <%= form_with model: @post, local: true do |f| %>
           <div class="form-input">
             <%= f.text_field :url, class: 'form-input', placeholder: 'url' %>
           </div>

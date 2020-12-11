@@ -22,6 +22,7 @@
 | year    | string     | null: false                    |
 | month   | string     | null: false                    |
 | user_id | references | null: false, foreign_key: true |
+| zine_id | references | null: false, foreign_key: true |
 
 ### Association
 

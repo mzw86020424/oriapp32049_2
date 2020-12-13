@@ -1,4 +1,6 @@
 <% @zines.each do |zine| %>
-  <%= link_to "#{zine.year}年#{zine.month}月号", zine_path(zine.id), class: '' %>
+  <%#= link_to "#{zine.year}年#{zine.month}月号", zine_path(zine.id), class: '' %>
+  <%= link_to image_tag(thumbalizr_url(zine_path(zine.id), {:width =>  480})), zine_path(zine.id) %>
   <br>
 <% end %>
+

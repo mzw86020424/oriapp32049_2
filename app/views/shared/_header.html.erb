@@ -1,42 +1,36 @@
 <header>
-  <div class="header-container">
-    <div class="logo">
-      <%# <img src="" /> %>
-      <%= link_to "月刊マイガジン", root_path %></li>
-      <span class="text9">
-      
-      </span>
-      <%#= "#{@zine.year}年#{@zine.month}月号" %>
-    </div>
-    <nav class="header-nav">
-      <div class="header-nav-item-input">
+  <div class="container-fluid">
+    <nav class="navbar navbar-dark bg-dark fixed-top d-flex justify-content-around">
+      <a href="#" class="navbar-brand ">
+        <%# <img src="" /> %>
+        <%= link_to "月刊マイガジン", root_path %>
+      </a>
+        <span class="navbar-text"><%=@zine.year %>年<%=@zine.month %>月号</span>
+      <div class="header-nav-item mr-auto">
+        <%= image_tag current_user.image, class: 'header-avatar' %>
+      </div>
+      <div class="form-inline mr-3">
         <%= form_with model: @post, local: true do |f| %>
-          <div class="form-input">
-            <%= f.text_field :url, class: 'form-input', placeholder: 'url' %>
-          </div>
-          <%= f.submit 'SAVE!', class: 'button-2' %>
+          <%= f.text_field :url, class: 'form-control mr-1', placeholder: 'URL' %>
+          <%= f.submit '保存！', class: 'btn btn-secondary' %>
         <% end %>
-      
       </div>
-      <div class="header-nav-item">
-            <%= image_tag current_user.image, class: 'header-avatar' %>
-      </div>
-      <div class="header-nav-item">
-        <div class="navbar">
-          <ul class="nav-lists">
-          <li class="background-red" id="lists">menu</li>
-          </ul>
-          <ul class="show-lists hidden" id="pull-down">
-          <li class="pull-down-list">
-            <%= link_to "マイマガジン一覧", zines_path %></li>
-          <li class="pull-down-list">リスト2</li>
-          <li class="pull-down-list">リスト3</li>
-          <li class="pull-down-list">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          </li>
-          </ul>
+      <button class="navbar-toggler" type="button"
+      data-toggle="collapse"
+      data-target="#navmenu1"
+      aria-controls="navmenu1"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu1">
+        <div class="navbar-nav">
+          <%= link_to "マイガジン一覧", zines_path, class: "nav-item nav-link"%>
+          <%= link_to "", "#", class: "nav-item nav-link"%>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-item nav-link"%>
         </div>
       </div>
     </nav>
   </div>
+
 </header>

@@ -1,12 +1,17 @@
-.content_post0 img {
-  margin-top: 60px;
-  object-fit: cover;
-  width: 100vw;
-  height: 60vh;
-  border: 1px solid black;
+.hoge {
+  /* float: left; */
 }
 
-.content_post1 img {
+.content_post img{
+  /* float: left; */
+  object-fit: cover;
+  width: 100vw;
+  height: 20vh;
+  border: 1px solid black;
+  
+}
+
+/* .content_post1 img {
   object-fit: cover;
   width: 100vw;
   height: 45vh;
@@ -18,4 +23,4 @@
   width: 100vw;
   height: 30vh;
   border: 2px solid black;
-}
+} */

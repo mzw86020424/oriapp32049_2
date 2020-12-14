@@ -5,6 +5,7 @@
         <%# <img src="" /> %>
         <%= link_to "月刊マイガジン", root_path %>
       </a>
+        <span class="navbar-text"><%=@zine.year %>年<%=@zine.month %>月号</span>
       <div class="header-nav-item mr-auto">
         <%= image_tag current_user.image, class: 'header-avatar' %>
       </div>

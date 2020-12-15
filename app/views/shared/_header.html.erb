@@ -3,7 +3,7 @@
     <nav class="navbar navbar-dark bg-dark fixed-top d-flex justify-content-around">
       <a href="#" class="navbar-brand ">
         <%# <img src="" /> %>
-        <%= link_to "月刊マイガジン", root_path %>
+        <%= link_to "〇〇〇〇", root_path %>
       </a>
         <span class="navbar-text"><%=@zine.year %>年<%=@zine.month %>月号</span>
       <div class="header-nav-item mr-auto">
@@ -12,7 +12,7 @@
       <div class="form-inline mr-3">
         <%= form_with model: @post, local: true do |f| %>
           <%= f.text_field :url, class: 'form-control mr-1', placeholder: 'URL' %>
-          <%= f.submit '保存！', class: 'btn btn-secondary' %>
+          <%= f.submit '保存', class: 'btn btn-secondary' %>
         <% end %>
       </div>
       <button class="navbar-toggler" type="button"
@@ -25,7 +25,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navmenu1">
         <div class="navbar-nav">
-          <%= link_to "マイガジン一覧", zines_path, class: "nav-item nav-link"%>
+          <%= link_to "一覧", zines_path, class: "nav-item nav-link"%>
           <%= link_to "", "#", class: "nav-item nav-link"%>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-item nav-link"%>
         </div>

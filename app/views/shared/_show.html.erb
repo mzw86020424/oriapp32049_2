@@ -8,3 +8,39 @@
     <% end %> 
   </ul>
 </div>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- jQuery UI -->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+<%# bootstrap %>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
+
+<%# Sortable %>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+<%# sortable %>
+<script>
+  let sortable = Sortable.create(hoge, {
+      group: "hoge",
+      animation: 100
+  })
+  Sortable.create(hoge, {
+    group: "save",
+    store: {
+      get: function (sortable) {
+        var order = localStorage.getItem(sortable.options.group.name);
+        return order ? order.split('|') : [];
+      }, 
+      set: function (sortable) {
+        var order = sortable.toArray();
+        localStorage.setItem(sortable.options.group.name, order.join('|'));
+      }
+    }
+  });
+</script>
